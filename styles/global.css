@@ -1,0 +1,21 @@
+ 
+  .container {
+    background-color:grey; /* Default background color */
+    /* Other styles */
+    width:380px;
+   
+  }
+
+  .container.dark {
+    background-color: black;
+    /* Other styles for dark mode */
+    width:380px;
+
+  }
+  
+  /* .container.dark {
+    background-color:black;
+  
+    width:380px;
+
+  } */
