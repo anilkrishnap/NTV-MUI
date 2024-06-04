@@ -31,18 +31,10 @@ const Equipment: React.FC<MyComponentProps> = ({
       <div className="container2">
         <GlobalStyles/>
         <RadiantBox>
-          <AccordionExpandDefault className="accordion-expand-default" style={{ backgroundColor: effectiveHeaderBackgroundColor }}>
-            <div className="header" style={{ backgroundColor: effectiveHeaderBackgroundColor }}>
-              <div className="title">Equipment(6)</div>
-              <div className="icon-container">
-                <div className="icon-wrapper">
-                  <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/bde763c236af0844c2e9f4756b0caa686dfd0e720cda19cfcaa95ff7b4f13db0?apiKey=a938513dc279413eaac5ce0f8c637f66&" className="icon" />
-                </div>
-              </div>
-            </div>
-          </AccordionExpandDefault>
+          <AccordionExpandDefault/>
 
-          <div className="div" style={{ backgroundColor: effectiveBackgroundColor, borderColor: effectiveBorderColor }}>
+
+          {/* <div className="div" style={{ backgroundColor: effectiveBackgroundColor, borderColor: effectiveBorderColor }}>
             <div className="div-2">
               <div className="div-3">
                 <img
@@ -133,7 +125,7 @@ const Equipment: React.FC<MyComponentProps> = ({
               </button>
             </div>
           </div>
-        </div>
+        </div> */}
         </RadiantBox>
       </div>
 
@@ -142,7 +134,7 @@ const Equipment: React.FC<MyComponentProps> = ({
           align-self: stretch;
           display: flex;
           flex-direction: column;
-          padding: 0 16px;
+
         }
         .accordion-expand-default {
           justify-content: center;

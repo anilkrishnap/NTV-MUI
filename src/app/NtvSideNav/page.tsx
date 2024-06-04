@@ -36,7 +36,7 @@ export default function MyComponent() {
       <Header/>
       <Madeline/>
       <KPI/>
-      <Equipment backgroundColor='black' />
+      <Equipment />
     </Box>
       
       <style jsx>{`
