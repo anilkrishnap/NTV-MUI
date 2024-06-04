@@ -1,4 +1,5 @@
- 
+ @import url('../styleguide.css');
+  
   .container {
     background-color:grey; /* Default background color */
     /* Other styles */
@@ -13,6 +14,7 @@
 
   }
   
+  /* .MuiPaper-root{box-shadow: none !important;} */
   /* .container.dark {
     background-color:black;
   

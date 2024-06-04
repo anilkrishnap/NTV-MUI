@@ -1,7 +1,8 @@
 'use client';
 import * as React from "react";
 import NtvAccordions from "../../components/NtvAccordions/NtvAccordions";
-import RadiantBox from "@/components/RadiantBox/RadiantBox";
+import RadiantBox from "../../components/RadiantBox/RadiantBox";
+import KPICard from "../../components/KPICard/KPICard";
 
 export default function MyComponent() {
   return (
@@ -9,8 +10,10 @@ export default function MyComponent() {
     <RadiantBox>
       <NtvAccordions>
         <div className="div">
-          <div className="div-2">KPI</div>
-          <div className="div-3">
+          <div className="div-2">
+          <KPICard/>
+          </div>
+          {/* <div className="div-3">
             <div className="div-4">
               <img
                 loading="lazy"
@@ -18,7 +21,7 @@ export default function MyComponent() {
                 className="img"
               />
             </div>
-          </div>
+          </div> */}
         </div>
       </NtvAccordions>
     </RadiantBox>
@@ -39,6 +42,7 @@ export default function MyComponent() {
           color: #f2f4f7;
           font: 700 14px/143% Inter, -apple-system, Roboto, Helvetica,
             sans-serif;
+            width:100%;
         }
         .div-3 {
           justify-content: center;

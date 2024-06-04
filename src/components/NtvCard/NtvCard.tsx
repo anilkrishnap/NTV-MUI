@@ -242,6 +242,7 @@ export default function NtvCard() {
           flex-direction: column;
           justify-content: center;
           padding: 0 16px;
+          border-bottom: 1px solid var(--Border-d2-l2, #D0D5DD);
         }
         .divMadeLineCard-24 {
           align-items: center;

@@ -3,6 +3,7 @@ import { builder, Builder } from "@builder.io/react";
 import Button from "./components/Button";
 import Counter from "./components/Counter/Counter";
 import Header from "./components/Header/Header";
+import KPICard from "./components/KPICard/KPICard";
 import NtvAccordions from "./components/NtvAccordions/NtvAccordions";
 import NtvCard from "./components/NtvCard/NtvCard";
 import RadiantAutoComplete from "./components/RadiantAutoComplete/RadiantAutoComplete";
@@ -124,4 +125,8 @@ Builder.registerComponent(NtvCard, {
 
 Builder.registerComponent(NtvAccordions, {
   name: "NtvAccordions",
+});
+
+Builder.registerComponent(KPICard, {
+  name: "KPICard",
 });

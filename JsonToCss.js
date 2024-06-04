@@ -1,7 +1,7 @@
 const fs = require('fs');
 
 const inputFile = 'token.json';
-const outputFile = 'styleguide1.css';
+const outputFile = 'styleguide.css';
 
 
 
