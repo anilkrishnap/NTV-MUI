@@ -17,7 +17,7 @@ export default function MUICardComponent() {
               <strong>Utilization</strong>
             </Typography>
             <Typography variant="body2">
-              Good (75% to 90%)
+              Moderate (25% to 50%)
             </Typography>
           </Box>
           <Box flexGrow={1}></Box>
