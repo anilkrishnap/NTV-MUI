@@ -7,6 +7,7 @@ import Box from '@mui/material/Box';
 import Header from '../../app/Header/page';
 import Madeline from '../../app/Madeline/page';
 import KPI from '../../app/KPI/page';
+import Equipment from '../Equipment/page';
 
 export default function MyComponent() {
   const [isToggled, setIsToggled] = useState(false);
@@ -35,6 +36,7 @@ export default function MyComponent() {
       <Header/>
       <Madeline/>
       <KPI/>
+      <Equipment backgroundColor='black' />
     </Box>
       
       <style jsx>{`

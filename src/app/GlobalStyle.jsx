@@ -9,6 +9,11 @@ const GlobalStyles = createGlobalStyle`
     --tertiary-color: #f1c40f;
     --text-color:white;
 
+     --default-background-color: #fcfcfd;
+  --default-font-color: #000;
+  --default-border-color: rgba(208, 213, 221, 1);
+  --default-header-background-color: #fff;
+
    
     --font-family: 'Arial, sans-serif';
   }
