@@ -4,11 +4,11 @@ import * as React from "react";
 export default function Header() {
   return (
     <>
-      <div className="div">
-        <div className="div-2">
-          <div className="div-3">
-            <div className="div-4">
-              <div className="div-5">
+      <div className="divHeader">
+        <div className="divHeader-2">
+          <div className="divHeader-3">
+            <div className="divHeader-4">
+              <div className="divHeader-5">
                 <img
                   loading="lazy"
                   src="https://cdn.builder.io/api/v1/image/assets/TEMP/8b640c078351a3b66419fad5ca6b15b0518180b15ad436ef59be354a64665db2?apiKey=a938513dc279413eaac5ce0f8c637f66&"
@@ -21,9 +21,9 @@ export default function Header() {
                 className="img-2"
               />
             </div>
-            <div className="div-6">
-              <div className="div-7">
-                <div className="div-8">
+            <div className="divHeader-6">
+              <div className="divHeader-7">
+                <div className="divHeader-8">
                   <img
                     loading="lazy"
                     src="https://cdn.builder.io/api/v1/image/assets/TEMP/61039aae9ca0cabc4d66c5f413609fe8839da294118e5a172bab06c0f2ac318c?apiKey=a938513dc279413eaac5ce0f8c637f66&"
