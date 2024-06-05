@@ -30,7 +30,7 @@ export default function MUIAccordionComponent({ variant }) {
     <> 
     <StyledAccordion variant={variant} defaultExpanded style={{margin:'0'}}>
     <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
+          expandIcon={<ExpandMoreIcon  style={{color:"grey"}}/>}
           aria-controls="panel1-content"
           id="panel1-header"
         >

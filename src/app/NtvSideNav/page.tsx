@@ -11,6 +11,7 @@ import  MUIAccordionComponent from '../KPI/page';
 import Equipment from '../Equipment/page';
 import MadelineCompnent from '../../components/MadelineComponent/MadelineCompnent';
 import CustomSearchInput from '../../components/CustomSearchInput/CustomSearchInput';
+import "../../../styleguide.css"
 
 export default function MyComponent() {
   const [isToggled, setIsToggled] = useState(false);
@@ -20,13 +21,16 @@ export default function MyComponent() {
   };
   const variants = {
     primary: {
-      // backgroundColor: 'var(--primary-color)',
-      backgroundColor: 'black',
+      backgroundColor: 'var(--Dark-bg-bg1-value)',
+      // backgroundColor: 'black',
       color:"white",
       color2:"var(--DQI-Widget-sub-title, #98A2B3)",
     
       // backgroundColor:"black",
-      backgroundColorCard:'var(--BG-2-blue-in-light, #152130)'
+      backgroundColorCard:'var(--BG-2-blue-in-light, #152130)',
+      backgroundColorTopology:"black",
+      backgroundColorHeader:"var(--BG-3-white-in-light, #1D2939);",
+      backgroundColorMadeline:"var(--BG-2-blue-in-light, #152130);"
       
       
     }
@@ -51,9 +55,9 @@ export default function MyComponent() {
       }}
     >
       {/* <Header/> */}
-      <CustomSearchInput/>
+      <CustomSearchInput  variant={variants.primary}/>
       <MadelineCompnent  variant={variants.primary} />
-      <MUIAccordionComponent variant={variants.primary} />
+      <MUIAccordionComponent  variant={variants.primary}  />
       {/* <Equipment  /> */}
     </Box>
       

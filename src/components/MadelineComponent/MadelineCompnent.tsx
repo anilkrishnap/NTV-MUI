@@ -6,7 +6,9 @@ import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { styled } from '@mui/material/styles'; 
+import MadelineTopology from './MadelineTopology';
 
+  
 const baseStyles = {
   backgroundColor: 'var(--BG-2-blue-in-light, #EFF3F7)',
   color: 'var(--DQI-Widget-title, #000)',
@@ -16,8 +18,9 @@ const baseStyles = {
 };
 
 const StyledCard = styled(Card)(({ variant }) => ({
-    backgroundColor: variant ? variant.backgroundColorCard : baseStyles.backgroundColor,
+    backgroundColor: variant ? variant.backgroundColorMadeline: baseStyles.backgroundColor,
     color: variant ? variant.color : baseStyles.color,
+   
    
   }));
 
@@ -44,7 +47,7 @@ export default function MadelineCompnent({variant}){
                     <Box sx={cardStyles.madelineTextIcons}>
 
                         <Box sx={cardStyles.ellipse}>
-                            <img src='https://uirepo.blob.core.windows.net/airwave/EllipseIcon.svg' />
+                            <img src='https://uirepo.blob.core.windows.net/airwave/EllipseIcon.svg'  />
                             <img src='https://uirepo.blob.core.windows.net/airwave/EllipseIcon.svg' />
                         </Box>
 
@@ -87,16 +90,10 @@ export default function MadelineCompnent({variant}){
                 </Box>
 
            
-            <CardActions sx={cardStyles.cardActions}>
-                <Box sx={cardStyles.cardActionImg}><img
-                    loading="lazy"
-                    src="https://uirepo.blob.core.windows.net/airwave/topology.svg"
-                    className="imgMadeLineCard-2"
-                />
-                </Box>
-                <Button size="small" style={{color:'var(--Heading, #0958D9)'}}>TOPLOGY</Button>
-            </CardActions>
-        </StyledCard></>
+            
+        </StyledCard>
+        <MadelineTopology variant={variant}/>
+      </>
      
        
           
