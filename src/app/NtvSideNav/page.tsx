@@ -9,6 +9,7 @@ import Madeline from '../../app/Madeline/page';
 // import KPI from '../KPI/page';
 import  MUIAccordionComponent from '../KPI/page';
 import Equipment from '../Equipment/page';
+import MadelineCompnent from '../../components/MadelineComponent/MadelineCompnent';
 
 export default function MyComponent() {
   const [isToggled, setIsToggled] = useState(false);
@@ -48,7 +49,7 @@ export default function MyComponent() {
       }}
     >
       <Header/>
-      <Madeline/>
+      <MadelineCompnent/>
       <MUIAccordionComponent variant={variants.primary}/>
       <Equipment />
     </Box>

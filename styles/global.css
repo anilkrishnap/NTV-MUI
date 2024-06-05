@@ -13,6 +13,8 @@
     width:380px;
 
   }
+
+  .MuiPaper-root-MuiAccordion-root:last-of-type{border-top-left-radius:'0';border-top-right-radius:'0';border-bottom-left-radius:'0px';border-bottom-right-radius: '0';}
   
   /* .MuiPaper-root{box-shadow: none !important;} */
   /* .container.dark {
