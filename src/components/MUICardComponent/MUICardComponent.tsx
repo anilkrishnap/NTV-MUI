@@ -6,32 +6,35 @@ import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
+const cardStyles = {
+  card: {
+    backgroundColor: 'var(--BG-2-blue-in-light, #EFF3F7)', boxShadow:'none',minWidth: 275
+  },
+};
+
 export default function MUICardComponent() {
   return (
     <>
-    <Card sx={{ backgroundColor: 'var(--BG-2-blue-in-light, #EFF3F7)', boxShadow:'none',minWidth: 275 }}>
+    <Card sx={cardStyles.card}>
       <CardContent>
         <Box display="flex" alignItems="center">
           <Box display="flex" flexDirection="column">
             <Typography>
               <strong>Utilization</strong>
             </Typography>
-            <Typography variant="body2">
+            <Typography>
               Moderate (25% to 50%)
             </Typography>
           </Box>
           <Box flexGrow={1}></Box>
           <img
             loading="lazy"
-            src="https://cdn.builder.io/api/v1/image/assets/TEMP/f096038999b1ff38132a475c789972a95d392daaaace567c023bf9c83b0fad22?"
+            src="https://uirepo.blob.core.windows.net/airwave/utilization_img.svg"
             className="img"
-            style={{ height: '100%' }}
           />
         </Box>
       </CardContent>
     </Card>
-    <style jsx>{`
-      `}</style>
     </>
   );
 }
