@@ -6,6 +6,7 @@ import Header from "./components/Header/Header";
 import KPICard from "./components/KPICard/KPICard";
 import NtvAccordions from "./components/NtvAccordions/NtvAccordions";
 import NtvCard from "./components/NtvCard/NtvCard";
+import NtvSideNav from "./components/NtvSideNav/NtvSideNav";
 import RadiantAutoComplete from "./components/RadiantAutoComplete/RadiantAutoComplete";
 import RadiantBox from "./components/RadiantBox/RadiantBox";
 import RadiantButton from "./components/RadiantButton/RadiantButton";
@@ -129,4 +130,8 @@ Builder.registerComponent(NtvAccordions, {
 
 Builder.registerComponent(KPICard, {
   name: "KPICard",
+});
+
+Builder.registerComponent(NtvSideNav, {
+  name: "NtvSideNav",
 });
