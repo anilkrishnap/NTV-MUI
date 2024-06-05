@@ -14,13 +14,17 @@ import { styled } from '@mui/material/styles';
 // };
 const StyledCard = styled(Card)(({ variant }) => ({
   backgroundColor: variant ? variant.backgroundColorCard : baseStyles.backgroundColor,
+  color: variant ? variant.color : baseStyles.color,
  
 }));
+
 const baseStyles = {
-  backgroundColor: 'orange',
+  backgroundColor: 'var(--BG-2-blue-in-light, #EFF3F7)',
+  color: 'var(--DQI-Widget-title, #000)',
+  backgroundColorCard:"white",
+  color2: 'var(--DQI-Widget-sub-title, #475467)',
 
 };
-
 
 export default function KPIDataCardComponent({variant}) {
   return (
@@ -32,7 +36,7 @@ export default function KPIDataCardComponent({variant}) {
             <Typography>
               <strong>Data Quality Index</strong>
             </Typography>
-            <Typography>
+            <Typography sx={{color:'var(--Text-color-3, #475467);'}}>
               Good (75% to 90%)
             </Typography>
           </Box>

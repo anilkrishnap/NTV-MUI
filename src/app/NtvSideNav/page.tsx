@@ -19,16 +19,17 @@ export default function MyComponent() {
   };
   const variants = {
     primary: {
-      backgroundColor: 'var(--primary-color)',
-      // backgroundColor:"black",
-      backgroundColorCard:'var(--secondary-color)'
-      
-    },
-    secondary: {
       // backgroundColor: 'var(--primary-color)',
-      backgroundColor:"white"
+      backgroundColor: 'black',
+      color:"white",
+      color2:"var(--DQI-Widget-sub-title, #98A2B3)",
+    
+      // backgroundColor:"black",
+      backgroundColorCard:'var(--BG-2-blue-in-light, #152130)'
+      
       
     }
+   
   }
   return (
   
@@ -48,10 +49,10 @@ export default function MyComponent() {
         },
       }}
     >
-      <Header/>
-      <MadelineCompnent/>
-      <MUIAccordionComponent variant={variants.primary}/>
-      <Equipment />
+      {/* <Header/> */}
+      <MadelineCompnent  variant={variants.primary} />
+      <MUIAccordionComponent variant={variants.primary} />
+      {/* <Equipment  /> */}
     </Box>
       
       <style jsx>{`

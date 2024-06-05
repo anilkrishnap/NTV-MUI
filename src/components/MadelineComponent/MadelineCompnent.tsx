@@ -5,6 +5,21 @@ import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import { styled } from '@mui/material/styles'; 
+
+const baseStyles = {
+  backgroundColor: 'var(--BG-2-blue-in-light, #EFF3F7)',
+  color: 'var(--DQI-Widget-title, #000)',
+  backgroundColorCard:"white",
+  color2: 'var(--DQI-Widget-sub-title, #475467)',
+
+};
+
+const StyledCard = styled(Card)(({ variant }) => ({
+    backgroundColor: variant ? variant.backgroundColorCard : baseStyles.backgroundColor,
+    color: variant ? variant.color : baseStyles.color,
+   
+  }));
 
 const cardStyles = {
     card: { boxShadow: 'none', minWidth: 275 },
@@ -19,10 +34,11 @@ const cardStyles = {
     madeLineHeader: { marginLeft: '10px', marginBottom: '10px', fontWeight:'700' },
     cardActionImg:{display: 'flex',width: '24px',height: '24px',padding: '4px',justifyContent: 'center',alignItems: 'center',gap: '8px',borderRadius: '50px',border: '1px solid var(--Heading, #0958D9)'}};
 
-export default function MadelineCompnent() {
+export default function MadelineCompnent({variant}){
     return (
-        <Card sx={cardStyles.card}>
-            <CardContent sx={cardStyles.cardContent}>
+        <>
+           <StyledCard variant={variant}>
+             
                 <Box sx={cardStyles.madeLineParent}>
                     <Box sx={cardStyles.madelineTextIcons}>
 
@@ -69,7 +85,7 @@ export default function MadelineCompnent() {
                     </Box>
                 </Box>
 
-            </CardContent>
+           
             <CardActions sx={cardStyles.cardActions}>
                 <Box sx={cardStyles.cardActionImg}><img
                     loading="lazy"
@@ -79,6 +95,10 @@ export default function MadelineCompnent() {
                 </Box>
                 <Button size="small" style={{color:'var(--Heading, #0958D9)'}}>TOPLOGY</Button>
             </CardActions>
-        </Card>
+        </StyledCard></>
+     
+       
+          
+      
     );
 }

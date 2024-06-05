@@ -6,8 +6,12 @@ import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { styled } from '@mui/material/styles'; 
+
 const baseStyles = {
-  backgroundColor: 'orange',
+  backgroundColor: 'var(--BG-2-blue-in-light, #EFF3F7)',
+  color: 'var(--DQI-Widget-title, #000)',
+  backgroundColorCard:"white",
+  color2: 'var(--DQI-Widget-sub-title, #475467)',
 
 };
 
@@ -18,8 +22,10 @@ const baseStyles = {
 // };
 const StyledCard = styled(Card)(({ variant }) => ({
   backgroundColor: variant ? variant.backgroundColorCard : baseStyles.backgroundColor,
+  color: variant ? variant.color : baseStyles.color,
+  color2: variant ? variant.color2 : baseStyles.color2,
  
-}));
+})); 
 export default function MUICardComponent({variant}) {
   return (
     <>
@@ -31,7 +37,7 @@ export default function MUICardComponent({variant}) {
             <Typography>
               <strong>Utilization</strong>
             </Typography>
-            <Typography>
+            <Typography sx={{color:'var(--Text-color-3, #475467);'}}>
               Moderate (25% to 50%)
             </Typography>
           </Box>

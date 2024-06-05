@@ -11,16 +11,21 @@ import KPIDataCardComponent from '../../components/KPIDataCardComponent/KPIDataC
 import { styled } from '@mui/material/styles';
 
 const baseStyles = {
-  backgroundColor: 'blue',
+  backgroundColor: 'white',
+  color: 'var(--DQI-Widget-title, #000)',
+ 
+  color2: 'var(--DQI-Widget-sub-title, #475467)',
 
 };
 
 const StyledAccordion = styled(Accordion)(({ variant }) => ({
   backgroundColor: variant ? variant.backgroundColor: baseStyles.backgroundColor,
+  color: variant ? variant.color: baseStyles.color,
+  color2: variant ? variant.color2: baseStyles.color2,
  
 }));
 export default function MUIAccordionComponent({ variant }) {
-  console.log(variant);
+
   return (
     <>
     <StyledAccordion variant={variant}>
