@@ -5,17 +5,26 @@ import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import { styled } from '@mui/material/styles'; 
+const baseStyles = {
+  backgroundColor: 'orange',
 
-const cardStyles = {
-  card: {
-    backgroundColor: 'var(--BG-2-blue-in-light, #EFF3F7)', boxShadow:'none',minWidth: 275
-  },
 };
 
-export default function MUICardComponent() {
+// const cardStyles = {
+//   card: {
+//     backgroundColor: 'var(--BG-2-blue-in-light, #EFF3F7)', boxShadow:'none',minWidth: 275
+//   },
+// };
+const StyledCard = styled(Card)(({ variant }) => ({
+  backgroundColor: variant ? variant.backgroundColorCard : baseStyles.backgroundColor,
+ 
+}));
+export default function MUICardComponent({variant}) {
   return (
     <>
-    <Card sx={cardStyles.card}>
+     <StyledCard variant={variant}>
+     
       <CardContent>
         <Box display="flex" alignItems="center">
           <Box display="flex" flexDirection="column">
@@ -34,7 +43,9 @@ export default function MUICardComponent() {
           />
         </Box>
       </CardContent>
-    </Card>
+   
+     </StyledCard>
+   
     </>
   );
 }

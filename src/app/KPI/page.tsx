@@ -16,7 +16,7 @@ const baseStyles = {
 };
 
 const StyledAccordion = styled(Accordion)(({ variant }) => ({
-  backgroundColor: variant ? variant.backgroundColor : baseStyles.backgroundColor,
+  backgroundColor: variant ? variant.backgroundColor: baseStyles.backgroundColor,
  
 }));
 export default function MUIAccordionComponent({ variant }) {
@@ -33,9 +33,9 @@ export default function MUIAccordionComponent({ variant }) {
         </AccordionSummary>
         <AccordionDetails>
           <Box sx={{ marginBottom: "16px"}}>
-            <MUICardComponent />
+            <MUICardComponent  variant={variant}/>
           </Box>
-          <KPIDataCardComponent />
+          <KPIDataCardComponent  variant={variant}/>
         </AccordionDetails></StyledAccordion>;
    
        

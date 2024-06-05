@@ -18,8 +18,14 @@ export default function MyComponent() {
   };
   const variants = {
     primary: {
+      backgroundColor: 'var(--primary-color)',
+      // backgroundColor:"black",
+      backgroundColorCard:'var(--secondary-color)'
+      
+    },
+    secondary: {
       // backgroundColor: 'var(--primary-color)',
-      backgroundColor:"black"
+      backgroundColor:"white"
       
     }
   }
