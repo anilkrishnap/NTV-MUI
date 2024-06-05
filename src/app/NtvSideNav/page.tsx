@@ -6,7 +6,7 @@ import GlobalStyles from '../GlobalStyle';
 import Box from '@mui/material/Box';
 import Header from '../../app/Header/page';
 import Madeline from '../../app/Madeline/page';
-import KPI from '../KPI/page_backup';
+import KPI from '../KPI/page';
 import Equipment from '../Equipment/page';
 
 export default function MyComponent() {
