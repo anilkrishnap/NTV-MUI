@@ -36,7 +36,7 @@ export default function MUIAccordionComponent({ variant }) {
             <MUICardComponent  variant={variant}/>
           </Box>
           <KPIDataCardComponent  variant={variant}/>
-        </AccordionDetails></StyledAccordion>;
+        </AccordionDetails></StyledAccordion>
    
        
    
