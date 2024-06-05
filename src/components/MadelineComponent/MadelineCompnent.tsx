@@ -23,6 +23,7 @@ const StyledCard = styled(Card)(({ variant }) => ({
 
 const cardStyles = {
     card: { boxShadow: 'none', minWidth: 275 },
+    BoxContainer:{padding:'10px', borderRadius:0},
     cardContent: { backgroundColor: 'var(--BG-2-blue-in-light, #EFF3F7)' },
     cardActions: { display: "flex", flexWrap: "wrap", justifyContent: "center", alignItems: "center", borderBottom: '1px solid #eee', margin: '0 16px' },
     ellipse: { display: 'flex', width: '28px', height: '20px', padding: '4px 20px', justifyContent: 'center', alignItems: 'center', gap: '4px', borderRadius: 'var(--radius-lg, 12px)', border: '0.5px solid var(--Border-d2-l2, #D0D5DD)', background: 'var(--BG-4-white-in-light, #FFF)' },
@@ -37,7 +38,7 @@ const cardStyles = {
 export default function MadelineCompnent({variant}){
     return (
         <>
-           <StyledCard variant={variant}>
+           <StyledCard variant={variant} sx={cardStyles.BoxContainer}>
              
                 <Box sx={cardStyles.madeLineParent}>
                     <Box sx={cardStyles.madelineTextIcons}>

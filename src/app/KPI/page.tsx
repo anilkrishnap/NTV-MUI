@@ -27,8 +27,8 @@ const StyledAccordion = styled(Accordion)(({ variant }) => ({
 export default function MUIAccordionComponent({ variant }) {
 
   return (
-    <>
-    <StyledAccordion variant={variant}>
+    <> 
+    <StyledAccordion variant={variant} defaultExpanded style={{margin:'0'}}>
     <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1-content"
