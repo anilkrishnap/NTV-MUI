@@ -1,12 +1,13 @@
 
 "use client";
 import React, { useState } from 'react';
-import "../../../styles/global.css";
+// import "../../../styles/global.css";
 import GlobalStyles from '../GlobalStyle';
 import Box from '@mui/material/Box';
 import Header from '../../app/Header/page';
 import Madeline from '../../app/Madeline/page';
-import KPI from '../KPI/page';
+// import KPI from '../KPI/page';
+import  MUIAccordionComponent from '../KPI/page';
 import Equipment from '../Equipment/page';
 
 export default function MyComponent() {
@@ -15,6 +16,13 @@ export default function MyComponent() {
   const handleToggle = () => {
     setIsToggled(!isToggled);
   };
+  const variants = {
+    primary: {
+      // backgroundColor: 'var(--primary-color)',
+      backgroundColor:"black"
+      
+    }
+  }
   return (
   
     <>
@@ -35,7 +43,7 @@ export default function MyComponent() {
     >
       <Header/>
       <Madeline/>
-      <KPI/>
+      <MUIAccordionComponent variant={variants.primary}/>
       <Equipment />
     </Box>
       

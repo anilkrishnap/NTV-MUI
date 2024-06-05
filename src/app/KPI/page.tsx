@@ -8,13 +8,23 @@ import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import MUICardComponent from '../../components/MUICardComponent/MUICardComponent';
 import KPIDataCardComponent from '../../components/KPIDataCardComponent/KPIDataCardComponent';
+import { styled } from '@mui/material/styles';
 
+const baseStyles = {
+  backgroundColor: 'blue',
 
-export default function MUIAccordionComponent() {
+};
+
+const StyledAccordion = styled(Accordion)(({ variant }) => ({
+  backgroundColor: variant ? variant.backgroundColor : baseStyles.backgroundColor,
+ 
+}));
+export default function MUIAccordionComponent({ variant }) {
+  console.log(variant);
   return (
     <>
-      <Accordion defaultExpanded>
-        <AccordionSummary
+    <StyledAccordion variant={variant}>
+    <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1-content"
           id="panel1-header"
@@ -22,12 +32,14 @@ export default function MUIAccordionComponent() {
           <Typography><strong>KPI</strong></Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Box sx={{ marginBottom: "16px" }}>
+          <Box sx={{ marginBottom: "16px"}}>
             <MUICardComponent />
           </Box>
           <KPIDataCardComponent />
-        </AccordionDetails>
-      </Accordion>
+        </AccordionDetails></StyledAccordion>;
+   
+       
+   
     </>
   );
 }
