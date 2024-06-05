@@ -61,7 +61,7 @@ export default function MadelineCompnent() {
                             <Box>
                                 <Typography variant="body2">CLLI Code:</Typography>
                             </Box>
-                            <Box marginLeft={'48px'}>
+                            <Box marginLeft={'45px'}>
                                 <Typography variant="body2">TLJHGYT875T</Typography>
                             </Box>
                         </Box>
