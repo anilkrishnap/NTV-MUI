@@ -20,38 +20,49 @@ import SearchInput from '@/components/SearchInput/SearchInput';
 
 const baseStyles = {
   backgroundColor: 'white',
-  color: 'var(--DQI-Widget-title, #000)',
- 
-  color2: 'var(--DQI-Widget-sub-title, #475467)',
+  color: '#0958D9',
+  textcolor:"#475467"
+
 
 };
 
 const StyledBox = styled(Box)(({ variant }) => ({
   backgroundColor: variant ? variant.backgroundColor: baseStyles.backgroundColor,
-  color: variant ? variant.color: baseStyles.color,
-  color2: variant ? variant.color2: baseStyles.color2,
+  color: variant ? variant.color2: baseStyles.color,
+  '& .MuiListItemText-secondary': {
+    color: variant ? variant.textcolor : baseStyles.textcolor,
+  },
+
  
 }));
 
+const StyledListItemText = styled(ListItemText)(({  variant }) => ({
+  '& .MuiListItemText-secondary': {
+    color: variant ? variant.textcolor : baseStyles.textcolor,
+  },
+}));
+
+
 export default function Equipment({variant}) {
+  
   const [dense, setDense] = React.useState(false);
   const [secondary, setSecondary] = React.useState(false);
 
   return (
     <StyledBox variant={variant} >
     <Box sx={{ flexGrow: 1, maxWidth: 752 }}>
+    <SearchInput variant={variant}/>
      
       
       <Grid container spacing={2}>
+       
         
         <Grid item xs={12} md={12}>
-
-          <SearchInput/>
           
             <List dense={dense}>
                 <ListItem>
                   <img src='https://uirepo.blob.core.windows.net/airwave/internet-devices.svg' style={{marginRight:'15px'}}/>
-                  <ListItemText
+                  <StyledListItemText
                     primary="ENODEB"
                     secondary="384002 E20TH BROADWAY AWS"
                   />
@@ -62,7 +73,7 @@ export default function Equipment({variant}) {
 
                 <ListItem>
                   <img src='https://uirepo.blob.core.windows.net/airwave/radio_frame_icon.svg' style={{marginRight:'15px'}}/>
-                  <ListItemText
+                  <StyledListItemText
                     primary="RADIO FRAME"
                     secondary="NY_MINI NO2_002 ASSEMBIAGE"
                   />
@@ -73,7 +84,7 @@ export default function Equipment({variant}) {
 
                 <ListItem>
                   <img src='https://uirepo.blob.core.windows.net/airwave/radio_frame_icon.svg' style={{marginRight:'15px'}}/>
-                  <ListItemText
+                  <StyledListItemText
                     primary="RADIO FRAME"
                     secondary="NY_MINI NO2_002 ASSEMBIAGE"
                   />
@@ -84,7 +95,7 @@ export default function Equipment({variant}) {
 
                 <ListItem>
                   <img src='https://uirepo.blob.core.windows.net/airwave/cell_calendar_icon.svg' style={{marginRight:'15px'}}/>
-                  <ListItemText
+                  <StyledListItemText
                     primary="CDMA 800 CELL"
                     secondary="NY_MINI NO2_002 ASSEMBIAGE"
                   />
@@ -95,7 +106,7 @@ export default function Equipment({variant}) {
 
                 <ListItem>
                   <img src='https://uirepo.blob.core.windows.net/airwave/internet-devices.svg' style={{marginRight:'15px'}}/>
-                  <ListItemText
+                  <StyledListItemText
                     primary="ENODEB"
                     secondary="MINLNYACTA-P-AL-0002-01"
                   />
@@ -106,7 +117,7 @@ export default function Equipment({variant}) {
 
                 <ListItem>
                   <img src='https://uirepo.blob.core.windows.net/airwave/cell_calendar_icon.svg' style={{marginRight:'15px'}}/>
-                  <ListItemText
+                  <StyledListItemText
                     primary="CDMA 800 CELL"
                     secondary="NY_MINI NO2_002 ASSEMBIAGE"
                   />

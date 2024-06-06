@@ -6,10 +6,12 @@ import "../../../styleguide.css"
 function page() {
 
 const variants = {
-  primary: {
+  dark: {
     backgroundColor: 'var(--Dark-bg-bg1-value)',
     // backgroundColor: 'black',
     color:"white",
+    color2:"#0958D9",
+    textcolor: " #D0D5DD",
     // color2:"var(--DQI-Widget-sub-title, #98A2B3)",
   
     // backgroundColor:"black",
@@ -20,7 +22,7 @@ const variants = {
     
     
   },
-  secondary:{
+  hybrid:{
     backgroundColor: ' var(--Dark-general-g2-value)',
     // backgroundColor: 'black',
     color:" --Dark-text-t1-value",
@@ -38,7 +40,7 @@ const variants = {
 }
   return (
     <div>
-        <NtvSideNav variant={variants.primary}/>
+        <NtvSideNav variant={variants.dark}/>
       
     </div>
   )

@@ -11,10 +11,11 @@ import KPIDataCardComponent from '../../components/KPIDataCardComponent/KPIDataC
 import { styled } from '@mui/material/styles'; 
 
 const baseStyles = {
-  backgroundColor: 'white',
+  backgroundColor: 'var(--light-bg-bg4-value)',
   color: 'var(--DQI-Widget-title, #000)',
  
   color2: 'var(--DQI-Widget-sub-title, #475467)',
+  
 
 };
 
