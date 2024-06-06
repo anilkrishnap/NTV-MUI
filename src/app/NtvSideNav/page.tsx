@@ -13,43 +13,43 @@ import MadelineCompnent from '../../components/MadelineComponent/MadelineCompnen
 import CustomSearchInput from '../../components/CustomSearchInput/CustomSearchInput';
 import "../../../styleguide.css"
 
-export default function MyComponent() {
+export default function NtvSideNav({variant}) {
   const [isToggled, setIsToggled] = useState(false);
 
   const handleToggle = () => {
     setIsToggled(!isToggled);
   };
-  const variants = {
-    primary: {
-      backgroundColor: 'var(--Dark-bg-bg1-value)',
-      // backgroundColor: 'black',
-      color:"white",
-      // color2:"var(--DQI-Widget-sub-title, #98A2B3)",
+  // const variants = {
+  //   primary: {
+  //     backgroundColor: 'var(--Dark-bg-bg1-value)',
+  //     // backgroundColor: 'black',
+  //     color:"white",
+  //     // color2:"var(--DQI-Widget-sub-title, #98A2B3)",
     
-      // backgroundColor:"black",
-      backgroundColorCard:'var(--BG-2-blue-in-light, #152130)',
-      backgroundColorTopology:"black",
-      backgroundColorHeader:"var(--BG-3-white-in-light, #1D2939);",
-      backgroundColorMadeline:"var(--BG-2-blue-in-light, #152130);"
+  //     // backgroundColor:"black",
+  //     backgroundColorCard:'var(--BG-2-blue-in-light, #152130)',
+  //     backgroundColorTopology:"black",
+  //     backgroundColorHeader:"var(--BG-3-white-in-light, #1D2939);",
+  //     backgroundColorMadeline:"var(--BG-2-blue-in-light, #152130);"
       
       
-    },
-    secondary:{
-      backgroundColor: ' var(--Dark-general-g2-value)',
-      // backgroundColor: 'black',
-      color:" --Dark-text-t1-value",
-      // color2:"var(--DQI-Widget-sub-title, #98A2B3)",
+  //   },
+  //   secondary:{
+  //     backgroundColor: ' var(--Dark-general-g2-value)',
+  //     // backgroundColor: 'black',
+  //     color:" --Dark-text-t1-value",
+  //     // color2:"var(--DQI-Widget-sub-title, #98A2B3)",
     
-      // backgroundColor:"black",
-      backgroundColorCard:'var( --Dark-general-g4-value)',
-      backgroundColorTopology:"var(--Dark-general-g2-value)",
-      backgroundColorHeader:"var(--Dark-general-g2-value);",
-      backgroundColorMadeline:"var(--Dark-general-g4-value);"
+  //     // backgroundColor:"black",
+  //     backgroundColorCard:'var( --Dark-general-g4-value)',
+  //     backgroundColorTopology:"var(--Dark-general-g2-value)",
+  //     backgroundColorHeader:"var(--Dark-general-g2-value);",
+  //     backgroundColorMadeline:"var(--Dark-general-g4-value);"
       
 
-    }
+  //   }
    
-  }
+  // }
   return (
   
     <>
@@ -69,9 +69,9 @@ export default function MyComponent() {
       }}
     >
       {/* <Header/> */}
-      <CustomSearchInput />
-      <MadelineCompnent  />
-      <MUIAccordionComponent />
+      <CustomSearchInput  variant={variant}/>
+      <MadelineCompnent variant={variant} />
+      <MUIAccordionComponent variant={variant} />
       {/* <Equipment  /> */}
     </Box>
       
