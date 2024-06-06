@@ -16,6 +16,7 @@ import Typography from '@mui/material/Typography';
 import FolderIcon from '@mui/icons-material/Folder';
 import DeleteIcon from '@mui/icons-material/Delete';
 import { Divider } from '@mui/material';
+import SearchInput from '@/components/SearchInput/SearchInput';
 
 const baseStyles = {
   backgroundColor: 'white',
@@ -44,6 +45,8 @@ export default function Equipment({variant}) {
       <Grid container spacing={2}>
         
         <Grid item xs={12} md={12}>
+
+          <SearchInput/>
           
             <List dense={dense}>
                 <ListItem>
