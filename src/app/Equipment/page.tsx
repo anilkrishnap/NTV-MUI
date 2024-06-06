@@ -28,7 +28,7 @@ const baseStyles = {
 
 const StyledBox = styled(Box)(({ variant }) => ({
   backgroundColor: variant ? variant.backgroundColor: baseStyles.backgroundColor,
-  color: variant ? variant.color2: baseStyles.color,
+  color: variant ? variant.color: baseStyles.color,
   '& .MuiListItemText-secondary': {
     color: variant ? variant.textcolor : baseStyles.textcolor,
   },
@@ -51,7 +51,7 @@ export default function Equipment({variant}) {
   return (
     <StyledBox variant={variant} >
     <Box sx={{ flexGrow: 1, maxWidth: 752 }}>
-    <SearchInput variant={variant}/>
+    <SearchInput variant={variant} />
      
       
       <Grid container spacing={2}>

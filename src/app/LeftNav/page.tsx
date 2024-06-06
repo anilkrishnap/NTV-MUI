@@ -9,7 +9,7 @@ const variants = {
   dark: {
     backgroundColor: 'var(--Dark-bg-bg1-value)',
     // backgroundColor: 'black',
-    color:"white",
+    color:"white !important",
     color2:"#0958D9",
     textcolor: " #D0D5DD",
     // color2:"var(--DQI-Widget-sub-title, #98A2B3)",
@@ -40,7 +40,7 @@ const variants = {
 }
   return (
     <div>
-        <NtvSideNav variant={variants.dark}/>
+        <NtvSideNav/>
       
     </div>
   )

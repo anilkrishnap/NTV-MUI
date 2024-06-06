@@ -73,7 +73,7 @@ export default function NtvSideNav({variant}) {
       <CustomSearchInput  variant={variant}/>
       <MadelineCompnent variant={variant} />
       <MUIAccordionComponent variant={variant}  />
-      <EquipmentAccordion variant={variant}/>
+      <EquipmentAccordion  variant={variant} />
     </Box>
       
       <style jsx>{`
