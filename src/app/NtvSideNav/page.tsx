@@ -12,6 +12,7 @@ import Equipment from '../Equipment/page';
 import MadelineCompnent from '../../components/MadelineComponent/MadelineCompnent';
 import CustomSearchInput from '../../components/CustomSearchInput/CustomSearchInput';
 import "../../../styleguide.css"
+import EquipmentAccordion from '../../components/EquipmentAccordion/EquipmentAccordion';
 
 export default function NtvSideNav({variant}) {
   const [isToggled, setIsToggled] = useState(false);
@@ -72,7 +73,7 @@ export default function NtvSideNav({variant}) {
       <CustomSearchInput  variant={variant}/>
       <MadelineCompnent variant={variant} />
       <MUIAccordionComponent variant={variant} />
-      {/* <Equipment  /> */}
+      <EquipmentAccordion/>
     </Box>
       
       <style jsx>{`
