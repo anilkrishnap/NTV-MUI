@@ -16,6 +16,7 @@ import Typography from '@mui/material/Typography';
 import FolderIcon from '@mui/icons-material/Folder';
 import DeleteIcon from '@mui/icons-material/Delete';
 import { Divider } from '@mui/material';
+import SearchInput from '../../components/SearchInput/SearchInput';
 
 export default function Equipment() {
   const [dense, setDense] = React.useState(false);
@@ -28,6 +29,8 @@ export default function Equipment() {
       <Grid container spacing={2}>
         
         <Grid item xs={12} md={12}>
+
+          <SearchInput/>
           
             <List dense={dense}>
                 <ListItem>
