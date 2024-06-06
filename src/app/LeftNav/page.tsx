@@ -40,7 +40,7 @@ const variants = {
 }
   return (
     <div>
-        <NtvSideNav/>
+        <NtvSideNav />
       
     </div>
   )
