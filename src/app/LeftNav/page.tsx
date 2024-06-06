@@ -40,7 +40,7 @@ const variants = {
 }
   return (
     <div>
-        <NtvSideNav  variant={variants.dark}/>
+        <NtvSideNav  />
       
     </div>
   )
