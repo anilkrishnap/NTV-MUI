@@ -29,7 +29,7 @@ const customStyles = {
     alignSelf: 'stretch',
     backgroundColor
     : variant ? variant.backgroundColorHeader :
-    'white'
+    'var(--light-bg-bg4-value)'
     ,
     },
     searchContainer:{width:'320px', height:'40px', border:'1px solid #000',
