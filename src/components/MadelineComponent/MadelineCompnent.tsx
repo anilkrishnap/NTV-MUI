@@ -10,7 +10,7 @@ import MadelineTopology from './MadelineTopology';
 
   
 const baseStyles = {
-  backgroundColor: 'var(--light-bg-bg4-value)',
+  backgroundColor: 'var(--BG-2-blue-in-light, #EFF3F7)',
   color: 'var(--DQI-Widget-title, #000)',
   backgroundColorCard:"white",
   color2: 'var(--DQI-Widget-sub-title, #475467)',
