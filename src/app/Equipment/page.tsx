@@ -16,21 +16,34 @@ import Typography from '@mui/material/Typography';
 import FolderIcon from '@mui/icons-material/Folder';
 import DeleteIcon from '@mui/icons-material/Delete';
 import { Divider } from '@mui/material';
-import SearchInput from '../../components/SearchInput/SearchInput';
 
-export default function Equipment() {
+const baseStyles = {
+  backgroundColor: 'white',
+  color: 'var(--DQI-Widget-title, #000)',
+ 
+  color2: 'var(--DQI-Widget-sub-title, #475467)',
+
+};
+
+const StyledBox = styled(Box)(({ variant }) => ({
+  backgroundColor: variant ? variant.backgroundColor: baseStyles.backgroundColor,
+  color: variant ? variant.color: baseStyles.color,
+  color2: variant ? variant.color2: baseStyles.color2,
+ 
+}));
+
+export default function Equipment({variant}) {
   const [dense, setDense] = React.useState(false);
   const [secondary, setSecondary] = React.useState(false);
 
   return (
+    <StyledBox variant={variant} >
     <Box sx={{ flexGrow: 1, maxWidth: 752 }}>
      
       
       <Grid container spacing={2}>
         
         <Grid item xs={12} md={12}>
-
-          <SearchInput/>
           
             <List dense={dense}>
                 <ListItem>
@@ -104,5 +117,6 @@ export default function Equipment() {
         </Grid>
       </Grid>
     </Box>
+    </StyledBox>
   );
 }

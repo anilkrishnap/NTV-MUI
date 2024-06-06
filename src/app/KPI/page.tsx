@@ -8,7 +8,7 @@ import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import MUICardComponent from '../../components/MUICardComponent/MUICardComponent';
 import KPIDataCardComponent from '../../components/KPIDataCardComponent/KPIDataCardComponent';
-import { styled } from '@mui/material/styles';
+import { styled } from '@mui/material/styles'; 
 
 const baseStyles = {
   backgroundColor: 'white',

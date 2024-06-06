@@ -6,11 +6,27 @@ import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import MUICardComponent from '../MUICardComponent/MUICardComponent';
 import Equipment from '../../app/Equipment/page';
+import { styled } from '@mui/material/styles'; 
+const baseStyles = {
+  backgroundColor: 'white',
+  color: 'var(--DQI-Widget-title, #000)',
+ 
+  color2: 'var(--DQI-Widget-sub-title, #475467)',
 
-export default function EquipmentAccordion() {
+};
+
+const StyledAccordion = styled(Accordion)(({ variant }) => ({
+  backgroundColor: variant ? variant.backgroundColor: baseStyles.backgroundColor,
+  color: variant ? variant.color: baseStyles.color,
+  color2: variant ? variant.color2: baseStyles.color2,
+ 
+}));
+
+export default function EquipmentAccordion({variant}) {
   return (
     <div>
-      <Accordion defaultExpanded>
+        <StyledAccordion variant={variant} defaultExpanded style={{margin:'0'}}>
+     
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1-content"
@@ -20,10 +36,12 @@ export default function EquipmentAccordion() {
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            <Equipment/>
+            <Equipment variant={variant}/>
           </Typography>
         </AccordionDetails>
-      </Accordion>
+   
+        </StyledAccordion>
+     
      
     </div>
   );

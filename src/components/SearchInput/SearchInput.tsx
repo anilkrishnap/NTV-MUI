@@ -10,6 +10,8 @@ import {
 import SearchIcon from '@mui/icons-material/Search';
 import ClearIcon from '@mui/icons-material/Clear';
 
+
+
 const useStyles = makeStyles((theme: Theme) => {
   return createStyles({
     search: {
