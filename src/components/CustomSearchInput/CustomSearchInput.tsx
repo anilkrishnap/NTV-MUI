@@ -24,7 +24,7 @@ export default function CustomSearchInput({variant}) {
     
 const customStyles = {
     parentContainer:{
-    width:'416px', height:'60px', padding:'10px 8px', display: 'flex',
+    width:'100%', maxWidth:'400px', height:'60px', padding:'10px 8px', display: 'flex',
     alignItems: 'flex-start',
     alignSelf: 'stretch',
     backgroundColor

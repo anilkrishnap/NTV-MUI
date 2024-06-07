@@ -9,6 +9,8 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import MUICardComponent from '../../components/MUICardComponent/MUICardComponent';
 import KPIDataCardComponent from '../../components/KPIDataCardComponent/KPIDataCardComponent';
 import { styled } from '@mui/material/styles'; 
+import ReusableAccordion from '@/components/ReusableAccordion/ReusableAccordion';
+import Equipment from '../Equipment/page';
 
 const baseStyles = {
   backgroundColor: 'var(--light-bg-bg4-value)',
@@ -30,19 +32,17 @@ export default function MUIAccordionComponent({ variant }) {
   return (
     <> 
     <StyledAccordion variant={variant} defaultExpanded style={{margin:'0'}}>
-    <AccordionSummary
-          expandIcon={<ExpandMoreIcon  style={{color:"grey"}}/>}
-          aria-controls="panel1-content"
-          id="panel1-header"
-        >
-          <Typography><strong>KPI</strong></Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Box sx={{ marginBottom: "16px"}}>
-            <MUICardComponent  variant={variant}/>
-          </Box>
-          <KPIDataCardComponent  variant={variant}/>
-        </AccordionDetails></StyledAccordion>
+
+    <ReusableAccordion title="KPI">
+      <MUICardComponent  variant={variant}/>
+      <KPIDataCardComponent  variant={variant}/>
+    </ReusableAccordion>
+      <ReusableAccordion title="Equipment(6)">
+        <Equipment variant={variant}/>
+      </ReusableAccordion>
+
+    
+        </StyledAccordion>
    
        
    

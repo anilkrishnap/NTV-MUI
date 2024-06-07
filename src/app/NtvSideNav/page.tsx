@@ -2,80 +2,46 @@
 "use client";
 import React, { useState } from 'react';
 // import "../../../styles/global.css";
-import GlobalStyles from '../GlobalStyle';
+// import GlobalStyles from '../GlobalStyle';
 import Box from '@mui/material/Box';
 import Header from '../../app/Header/page';
 import Madeline from '../../app/Madeline/page';
 // import KPI from '../KPI/page';
-import  MUIAccordionComponent from '../KPI/page';
+import MUIAccordionComponent from '../KPI/page';
 import Equipment from '../Equipment/page';
 import MadelineCompnent from '../../components/MadelineComponent/MadelineCompnent';
 import CustomSearchInput from '../../components/CustomSearchInput/CustomSearchInput';
 import "../../../styleguide.css"
 import EquipmentAccordion from '../../components/EquipmentAccordion/EquipmentAccordion';
 
-export default function NtvSideNav({variant}) {
+export default function NtvSideNav({ variant }) {
   const [isToggled, setIsToggled] = useState(false);
 
   const handleToggle = () => {
     setIsToggled(!isToggled);
   };
-  // const variants = {
-  //   primary: {
-  //     backgroundColor: 'var(--Dark-bg-bg1-value)',
-  //     // backgroundColor: 'black',
-  //     color:"white",
-  //     // color2:"var(--DQI-Widget-sub-title, #98A2B3)",
-    
-  //     // backgroundColor:"black",
-  //     backgroundColorCard:'var(--BG-2-blue-in-light, #152130)',
-  //     backgroundColorTopology:"black",
-  //     backgroundColorHeader:"var(--BG-3-white-in-light, #1D2939);",
-  //     backgroundColorMadeline:"var(--BG-2-blue-in-light, #152130);"
-      
-      
-  //   },
-  //   secondary:{
-  //     backgroundColor: ' var(--Dark-general-g2-value)',
-  //     // backgroundColor: 'black',
-  //     color:" --Dark-text-t1-value",
-  //     // color2:"var(--DQI-Widget-sub-title, #98A2B3)",
-    
-  //     // backgroundColor:"black",
-  //     backgroundColorCard:'var( --Dark-general-g4-value)',
-  //     backgroundColorTopology:"var(--Dark-general-g2-value)",
-  //     backgroundColorHeader:"var(--Dark-general-g2-value);",
-  //     backgroundColorMadeline:"var(--Dark-general-g4-value);"
-      
-
-  //   }
-   
-  // }
-  return (
   
+  return (
+
     <>
-    <GlobalStyles/>
-      {/* <div className={isToggled ? 'container dark' : 'container'}>
-      <button onClick={handleToggle} style={{cursor: 'pointer'}}> 
-      
-      {isToggled ? 'Turn Off' : 'Turn On'}
-    </button> */}
-    <Box 
-      sx={{
-        width: 416,
-        backgroundColor: 'container',
-        '&:hover': {
-          backgroundColor: 'container dark',
-        },
-      }}
-    >
-      {/* <Header/> */}
-      <CustomSearchInput  variant={variant}/>
-      <MadelineCompnent variant={variant} />
-      <MUIAccordionComponent variant={variant}  />
-      <EquipmentAccordion  variant={variant} />
-    </Box>
-      
+      {/* <GlobalStyles /> */}
+  
+      <Box
+        sx={{
+          width: 416,
+          backgroundColor: 'container',
+          '&:hover': {
+            backgroundColor: 'container dark',
+          },
+        }}
+      >
+  
+        <CustomSearchInput variant={variant} />
+        <MadelineCompnent variant={variant} />
+        <MUIAccordionComponent variant={variant} />
+  
+      </Box>
+
       <style jsx>{`
         .div {
           justify-content: center;
